@@ -1,0 +1,54 @@
+  
+
+<ion-header class="pageheader " >
+  <ion-navbar class="pageheader" hideBackButton="true">
+    <ion-title class="pageheader">
+      <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="titleimg" />
+     </a>   </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu' style="color:#ffffff;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+
+<ion-content padding class="pagebody">
+
+
+
+            <h3 class="title2">ORDER NOTIFICATIONS --------</h3>
+            <ion-card *ngFor="let post of curposts" >
+              
+              <ion-card-header class="cardodd">
+                    <h1>Order No :{{ post.dum_order_sno }}</h1>
+              </ion-card-header>
+              <ion-card-content class="cardeven">
+                  
+                     <ion-label  class="titcolor">Pickup Location</ion-label>
+                    <ion-label  class="txtcolor">{{post.dum_business_name}}</ion-label>
+                  <!-- <ion-label  class="titcolor">Delivery Location :</ion-label>
+                     <ion-label  class="txtcolor">{{post.dum_location}} </ion-label> -->
+                   <!--  <ion-label  class="titcolor"> Delivery Type :</ion-label>
+                             <ion-label  class="txtcolor">{{post.dum_info_deltype}} </ion-label> -->
+                         
+                <ion-row>
+                  <!-- <ion-col>
+                   <div>  <button ion-button type="submit" class="btnbgcolor"  >ACCEPT</button></div>
+                  </ion-col> -->
+                 
+                  <ion-col>
+                    <button ion-button type="submit" class="btnbgcolor" (click)="viewprofile(post.dum_order_sno)" >&nbsp;&nbsp;VIEW&nbsp;&nbsp;</button>
+                  </ion-col>
+                </ion-row>
+              </ion-card-content>
+            </ion-card>
+            
+      
+  
+    
+   
+
+  
+</ion-content>
+

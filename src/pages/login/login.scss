@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.pagelogin {
+    font-family: "centabel";
+    background: url("../../assets/imgs/login_bg.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .imgtitle
+  {
+    margin-top: 20px;
+  }
+  .imgcenter
+   {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .textcenter
+   {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .txtlog
+{
+	border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid white;
+  color:#ffffff;
+  font-size: 1.2em;
+  
+
+}
+
+.labellog
+{
+	  color:#ffffff;
+  font-size: 1.2em;
+
+}
+.formbg
+{
+    background:transparent;
+    
+    
+}
+.appbtn
+  {
+  	background-color:#468399;
+  	border-radius: 20px;
+  	width:100%;
+      font-size: 1.5em;
+   
+  }
+  span
+  {
+    text-align: center; vertical-align: middle;
+  }
+  

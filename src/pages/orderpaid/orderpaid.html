@@ -1,0 +1,227 @@
+<ion-header class="pageheader " >
+   <ion-navbar class="pageheader" hideBackButton="true">
+     <ion-title class="pageheader">
+       <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="titleimg" />
+      </a>   </ion-title>
+     <ion-buttons left>
+       <button ion-button icon-only menuToggle>
+         <ion-icon name='menu' style="color:#ffffff;"></ion-icon>
+       </button>
+     </ion-buttons>
+   </ion-navbar>
+   </ion-header>
+ 
+  
+  <ion-content padding class="orpagebody" >
+    
+  <ion-grid no-padding class="orderprofilebox1" >
+   <ion-row class="orderregcolbgcolor">
+       <ion-col col-12 class="orderprofilettilesmall orderregcolbgcolor">
+          <span class="ion-padding-top orderprofilespanlabel">PICKUP DETAILS</span>
+       </ion-col>   
+       
+        
+      </ion-row>
+   <ion-row class="hr">
+      <ion-col col-6 class="orderprofilettilesmall">
+         <span class=" ion-padding-top ">Customer Name </span>
+      </ion-col>
+      <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+         <span class=" ion-padding-top "> </span>
+      </ion-col>
+     
+       
+     </ion-row>
+     <ion-row class="hr">
+      <ion-col col-6 class="orderprofilettilesmall">
+         <span class=" ion-padding-top ">Mobile No </span>
+      </ion-col>
+      <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+         <span class=" ion-padding-top "> </span>
+      </ion-col>
+     
+       
+     </ion-row>
+    
+  
+  
+     <ion-row class="hr">
+         <ion-col col-6 class="orderprofilettilesmall">
+            <span class=" ion-padding-top ">Location </span>
+         </ion-col>
+         <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+            <span class=" ion-padding-top "> </span>
+         </ion-col>
+        
+          
+        </ion-row>
+        <ion-row class="hr">
+           <ion-col col-6 class="orderprofilettilesmall">
+              <span class=" ion-padding-top ">EirCode </span>
+           </ion-col>
+           <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+              <span class=" ion-padding-top "></span>
+           </ion-col>
+          
+            
+          </ion-row>
+        </ion-grid>
+        <ion-grid no-padding class="orderprofilebox1">
+            <ion-row class="orderregcolbgcolor">
+                <ion-col col-12 class="orderprofilettilesmall orderregcolbgcolor">
+                   <span class="ion-padding-top orderprofilespanlabel">DELIVERY DETAILS</span>
+                </ion-col>   
+                
+                 
+               </ion-row>
+          <ion-row class="hr">
+             <ion-col col-6 class="orderprofilettilesmall">
+                <span class=" ion-padding-top ">Name </span>
+             </ion-col>
+             <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                <span class=" ion-padding-top ">despickuplocation </span>
+             </ion-col>
+            
+              
+            </ion-row>
+            <ion-row class="hr">
+               <ion-col col-6 class="orderprofilettilesmall">
+                  <span class=" ion-padding-top ">Mobile No </span>
+               </ion-col>
+               <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                  <span class=" ion-padding-top ">{{cuslocation}} </span>
+               </ion-col>
+              
+                
+              </ion-row>
+          <ion-row class="hr">
+             <ion-col col-6 class="orderprofilettilesmall">
+                <span class=" ion-padding-top ">Location </span>
+             </ion-col>
+             <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                <span class=" ion-padding-top ">4444 </span>
+             </ion-col>
+            
+              
+            </ion-row>
+            <ion-row class="hr">
+               <ion-col col-6 class="orderprofilettilesmall">
+                  <span class=" ion-padding-top ">EirCode </span>
+               </ion-col>
+               <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                  <span class=" ion-padding-top ">ssss</span>
+               </ion-col>
+              
+                
+              </ion-row>
+  
+  </ion-grid>
+  
+  <ion-grid no-padding class="orderprofilebox1">
+     <ion-row >
+        
+         <ion-col class="ion-padding  orderregcolbgcolor ">
+           
+             <span class=" ion-padding-top  orderprofilespanlabel">ITEM DETAILS </span>
+          
+         </ion-col>
+     </ion-row>
+     <ion-row>
+         <ion-col class="orderregcolbgcolor">
+           <div>ITEM</div>
+         </ion-col>
+         <ion-col class="orderregcolbgcolor">
+           <div>QUANTITY</div>
+         </ion-col>
+         <ion-col class="orderregcolbgcolor">
+           <div>PRICE</div>
+         </ion-col>
+       </ion-row>
+  
+  
+     <ion-row *ngFor="let item of curposts">
+         <ion-col text-wrap class="orderregcolborder" >
+                                <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_name}} </span>
+                         </ion-col>
+                         <ion-col text-wrap class="orderregcolborder">
+                             <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_qty}} </span>
+                      </ion-col>
+                      <ion-col text-wrap class="orderregcolborder">
+                         <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_price}} </span>
+                  </ion-col>
+       </ion-row>
+       <ion-row>
+           <ion-col text-wrap class="orderregcolborder">
+                                  <span class=" ion-padding-top orderprofiletxtcolor">TOTAL </span>
+                           </ion-col>
+                           <ion-col text-wrap class="orderregcolborder">
+                               <span class=" ion-padding-top "> </span>
+                        </ion-col>
+                        <ion-col text-wrap class="orderregcolborder">
+                           <span class=" ion-padding-top orderprofiletxtcolor">{{totcost}} </span>
+                    </ion-col>
+         </ion-row>
+        
+       </ion-grid>
+       <ion-grid no-padding class="orderprofilebox1">
+          <ion-row class="orderregcolbgcolor">
+              <ion-col col-12 class="orderprofilettilesmall orderregcolbgcolor">
+                 <span class="ion-padding-top orderprofilespanlabel">INVOICE NO : </span>
+              </ion-col>   
+              
+               
+             </ion-row>
+        <ion-row class="hr">
+           <ion-col col-6 class="orderprofilettilesmall">
+              <span class=" ion-padding-top ">Delivery Charges </span>
+           </ion-col>
+           <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+              <span class=" ion-padding-top ">despickuplocation </span>
+           </ion-col>
+          
+            
+          </ion-row>
+          <ion-row class="hr">
+             <ion-col col-6 class="orderprofilettilesmall">
+                <span class=" ion-padding-top ">Total Tax</span>
+             </ion-col>
+             <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                <span class=" ion-padding-top ">4444444 </span>
+             </ion-col>
+            
+              
+            </ion-row>
+        <ion-row class="hr">
+           <ion-col col-6 class="orderprofilettilesmall">
+              <span class=" ion-padding-top ">Payment Type </span>
+           </ion-col>
+           <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+              <span class=" ion-padding-top ">444444 </span>
+           </ion-col>
+          
+            
+          </ion-row>
+          <ion-row class="hr">
+             <ion-col col-6 class="orderprofilettilesmall">
+                <span class=" ion-padding-top ">Delivery Type </span>
+             </ion-col>
+             <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                <span class=" ion-padding-top ">ssss</span>
+             </ion-col>
+            
+              
+            </ion-row>
+  
+  </ion-grid>
+       <ion-grid>
+           <ion-row>
+          
+            <ion-col col-12  class="orderprofiletxtcolor">
+               <button  class="orderprofileappbtn" ion-button   on-click="PaidSuccess()">
+                PAID
+                  </button>
+            </ion-col>
+           </ion-row>
+       </ion-grid>
+  
+  </ion-content>

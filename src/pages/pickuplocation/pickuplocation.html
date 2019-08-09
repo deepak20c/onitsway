@@ -1,0 +1,68 @@
+<ion-header class="pageheader " >
+    <ion-navbar class="pageheader" hideBackButton="true">
+      <ion-title class="pageheader">
+        <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="titleimg" />
+       </a>   </ion-title>
+      <ion-buttons left>
+        <button ion-button icon-only menuToggle>
+          <ion-icon name='menu' style="color:#ffffff;"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+  
+    
+    <ion-content padding class="pickuplocationpagebody">
+            <h3 class="hotellocationttile">HOTEL LOCATION....</h3>
+              
+                     
+                        
+            <div id="map" #map class="pickuplocationmap stylemap" ></div> 
+            
+    <ion-grid>
+        <ion-row>
+                <ion-col col-12>
+                    <span class="pickuplocationlabellog ion-padding-top "> Pickup Name : </span>
+                </ion-col>
+                       
+      <ion-col col-12> 
+           <span class="pickuplocationlabellog1 ion-padding-top "> {{getresname}} </span>
+         </ion-col>
+                          
+           
+     <ion-col col-12>
+          <span class="pickuplocationlabellog ion-padding-top "> Pickup Mobile No </span> 
+        </ion-col>
+                                        
+     <ion-col col-12> 
+        <span class="pickuplocationlabellog1 ion-padding-top "> {{getmobno}} </span>
+     </ion-col>
+     <ion-col col-12>
+      <span class="pickuplocationlabellog ion-padding-top "> Pickup Location </span> 
+    </ion-col>
+                                    
+ <ion-col col-12> 
+    <span class="pickuplocationlabellog1 ion-padding-top "> {{getpickuplocation}} </span>
+ </ion-col>
+    </ion-row>
+     </ion-grid>
+                  
+                <ion-grid>
+                    <ion-row>
+                   <!--  <ion-col col-6 class="pickuplocationttilesmall">
+                        <button  class="pickuplocationappbtn" ion-button   on-click="ordercollected()">
+                            ORDER COLLECTED</button>
+                     </ion-col> -->
+                      <ion-col col-6  class="pickuplocationtxtcolor">
+                        <button  class="pickuplocationappbtn" ion-button   on-click="StatusOrderPickup()">
+                          ORDER PICKEDUP
+                           </button>
+                     </ion-col>
+                     <ion-col col-6  class="pickuplocationtxtcolor">
+                        <button  class="pickuplocationappbtn" ion-button   on-click="customerlocation()">
+                          CUSTOMER LOCATION
+                           </button>
+                     </ion-col>
+                    </ion-row>
+                </ion-grid>
+      </ion-content>

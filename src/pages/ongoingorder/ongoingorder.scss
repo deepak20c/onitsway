@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.ongoingpagebody {
+    font-family: "centabel";
+       font-family: 'Montserrat', sans-serif;
+  }
+  .ongoingpageheader
+  {
+    background: url("../../assets/imgs/login_bg.png") no-repeat fixed !important;
+    background-size: cover !important;
+    height:50px;
+  }
+  .ongoingimgcenter
+   {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .ongoingtitleimg
+  {
+    
+    margin-left:10px;
+    float: left;
+    height: 40px;
+    margin-top:5px;
+    
+  }
+  .ongoingtitle2{
+      color: #468999;
+      font-weight: bold;
+  }
+  .ongoingcardodd
+  {
+      background-color: #468999;
+      color:#ffffff;
+      height: 50px;
+      font-weight:bold;
+      }
+  .ongoingcardeven
+  {
+    background-color: #ffffff;
+    color:#468999;
+      font-weight:bold;
+  }
+  .ongoingbtnbgcolor
+  {
+      background-color: #468999;
+      color:#ffffff;
+      font-weight: bold;
+      border-radius:20px;
+     
+  }
+  .ongoingtitcolor
+  {
+    color:#468999;
+    font-weight:bold;
+  }
+  .ongoingtxtcolor
+  {
+    color:#000000;
+    font-weight:bold;
+    
+  }
+  .ongoinghr {
+    border-bottom: 1px solid #ccc;
+   padding: 5px;
+    width: 100%;
+  }
+  .ongoingttilesmall
+  {
+    color:#468999;
+    font-weight:bold;
+    text-align: left;
+    vertical-align: middle; 
+     margin: auto;
+    font-size:1.2em;
+    text-indent: 4px;
+  
+  }
+  .ongoingtxtcolor
+  {
+    color:#000000;
+    font-weight:bold;
+      font-size:1.2em;
+      font-weight: bold;
+      }
+      .ongoingspanlabel
+{
+ 
+  text-align: center; 
+    color:#ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

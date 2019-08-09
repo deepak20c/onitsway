@@ -1,0 +1,7 @@
+{
+  "name": "OnItswayapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

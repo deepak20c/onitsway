@@ -1,0 +1,13 @@
+<ion-menu [content]="content" persistent="true" id="mymenu" >
+    <ion-header class="menupageheader">
+      <ion-toolbar class="menupageheader">
+          <ion-title  class="menupageheader">
+              <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="menutitleimg" />
+             </a>   </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <header-menu></header-menu>
+    </ion-content>
+  </ion-menu>
+  <ion-nav [root]="rootPage" #content id="nav"></ion-nav>

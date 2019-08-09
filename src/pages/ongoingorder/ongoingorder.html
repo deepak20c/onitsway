@@ -1,0 +1,118 @@
+  
+
+<ion-header class="ongoingpageheader " >
+  <ion-navbar class="ongoingpageheader" hideBackButton="true">
+    <ion-title class="ongoingpageheader">
+      <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="titleimg" />
+     </a>   </ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name='menu' style="color:#ffffff;"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  </ion-header>
+
+<ion-content no-padding class="ongoingpagebody">
+  <h3 class="ongoingtitle2">CURRENT ORDER  ----</h3>
+  <ion-grid no-padding class="orderprofilebox1" *ngFor="let post of curposts">
+    <ion-row class="orderregcolbgcolor">
+        <ion-col col-12 class="ongoingttilesmall orderregcolbgcolor">
+            <h1 class="ion-padding-top ongoingspanlabel" style="margin-top:3px;">Order No : {{ post.dum_order_sno }}</h1>
+        </ion-col>   
+        
+         
+       </ion-row>
+    <ion-row class="hr">
+       <ion-col col-6 class="ongoingttilesmall">
+          <span class=" ion-padding-top ">Pickup Location </span>
+       </ion-col>
+       <ion-col col-6 text-wrap class="ongoingtxtcolor">
+          <span class=" ion-padding-top ">{{post.dum_business_name}} </span>
+       </ion-col>
+      
+        
+      </ion-row>
+      <ion-row class="hr">
+        <ion-col col-6 class="ongoingttilesmall">
+           <span class=" ion-padding-top ">Customer Name </span>
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor">
+           <span class=" ion-padding-top ">{{post.dum_customer_name}} </span>
+        </ion-col>
+       
+         
+       </ion-row>
+       <ion-row class="hr">
+        <ion-col col-6 class="ongoingttilesmall">
+           <span class=" ion-padding-top ">Delivery Location </span>
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor" *ngIf="post.deleircode!=''">
+           <span class=" ion-padding-top " >{{post.deleircode}} </span>
+          
+ 
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor" *ngIf="post.deleircode==''">
+         <span class=" ion-padding-top " >{{post.dum_location}} </span>
+        
+
+      </ion-col>
+     
+         
+       </ion-row>
+       <ion-row class="hr">
+        <ion-col col-6 class="ongoingttilesmall">
+           <span class=" ion-padding-top ">Delivery Type </span>
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor">
+           <span class=" ion-padding-top ">{{post.dum_info_deltype}} </span>
+        </ion-col>
+       
+         
+       </ion-row>
+       <ion-row class="hr">
+         <ion-col col-6 class="ongoingttilesmall">
+            <span class=" ion-padding-top ">Order Status </span>
+         </ion-col>
+         <ion-col col-6 text-wrap class="ongoingtxtcolor">
+            <span class=" ion-padding-top ">{{post.dum_order_status}} </span>
+         </ion-col>
+        
+          
+        </ion-row>
+       <ion-row class="hr">
+        <ion-col col-6 class="ongoingttilesmall">
+           <span class=" ion-padding-top ">Driver Id </span>
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor">
+           <span class=" ion-padding-top ">{{post.dum_driver}} </span>
+        </ion-col>
+       
+         
+       </ion-row>
+       <ion-row class="hr">
+        <ion-col col-6 class="ongoingttilesmall">
+          <button ion-button type="submit" class="ongoingbtnbgcolor" (click)="pickupinfo(post.dum_order_sno,post.dum_business_name,post.dum_bususerid)" >&nbsp;&nbsp;PICKUP INFO&nbsp;&nbsp;</button>
+        </ion-col>
+        <ion-col col-6 text-wrap class="ongoingtxtcolor">
+          <button ion-button type="submit" class="ongoingbtnbgcolor" (click)="deliveryinfo(post.dum_order_sno)" >&nbsp;&nbsp;DELIEVRY INFO&nbsp;&nbsp;</button>
+        </ion-col>
+       
+         
+       </ion-row>
+      </ion-grid>
+
+
+
+
+
+        <!-- <ion-col>
+         <div>  <button ion-button type="submit" class="btnbgcolor"  >ACCEPT</button></div>
+        </ion-col> -->
+   
+    
+   
+
+  
+</ion-content>
+

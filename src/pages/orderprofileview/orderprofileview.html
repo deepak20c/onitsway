@@ -1,0 +1,207 @@
+<ion-header class="orderprofilepageheader" >
+   <ion-navbar class="orderprofilepageheader" hideBackButton="true">
+     <ion-title class="orderprofilepageheader">
+       <a href="#" (click)="logout()">   <img src="assets/imgs/login_title.png" class="titleimg" />
+      </a>   </ion-title>
+      <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name='menu' style="color:#ffffff;"></ion-icon>
+            </button>
+          </ion-buttons>
+   </ion-navbar>
+   </ion-header>
+ 
+ 
+ 
+ <ion-content padding class="orpagebody" > 
+    
+        <h3 class="orderprofilettile">ORDER AVAILABILITY....</h3>
+   <ion-grid no-padding class="orderprofilebox1" >
+       <ion-row class="orderregcolbgcolor">
+           <ion-col col-12 class="orderprofilettilesmall orderregcolbgcolor">
+              <span class="ion-padding-top orderprofilespanlabel">ORDER NO :{{localpasslocalorderno}} </span>
+           </ion-col>   
+           
+            
+          </ion-row>
+       <ion-row class="hr">
+          <ion-col col-6 class="orderprofilettilesmall">
+             <span class=" ion-padding-top ">Customer Name </span>
+          </ion-col>
+          <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+             <span class=" ion-padding-top ">{{cusname}} </span>
+          </ion-col>
+         
+           
+         </ion-row>
+         <ion-row class="hr">
+          <ion-col col-6 class="orderprofilettilesmall">
+             <span class=" ion-padding-top ">Mobile No </span>
+          </ion-col>
+          <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+             <span class=" ion-padding-top ">{{cusmobno}} </span>
+          </ion-col>
+         
+           
+         </ion-row>
+        
+ 
+   
+         <ion-row class="hr">
+             <ion-col col-6 class="orderprofilettilesmall">
+                <span class=" ion-padding-top ">Business Name </span>
+             </ion-col>
+             <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                <span class=" ion-padding-top ">{{businessname}} </span>
+             </ion-col>
+            
+              
+            </ion-row>
+            <ion-row class="hr">
+               <ion-col col-6 class="orderprofilettilesmall">
+                  <span class=" ion-padding-top ">Business. Mobno </span>
+               </ion-col>
+               <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                  <span class=" ion-padding-top ">{{resmobno}} </span>
+               </ion-col>
+              
+                
+              </ion-row>
+              <ion-row class="hr">
+                 <ion-col col-6 class="orderprofilettilesmall">
+                    <span class=" ion-padding-top ">Pickup Location </span>
+                 </ion-col>
+                 <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                    <span class=" ion-padding-top ">{{respickuplocation}} </span>
+                 </ion-col>
+                
+                  
+                </ion-row>
+               <!--  <ion-row class="hr">
+                   <ion-col col-6 class="orderprofilettilesmall">
+                      <span class=" ion-padding-top ">Delivery Location </span>
+                   </ion-col>
+                   <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                      <span class=" ion-padding-top ">{{cuslocation}} </span>
+                   </ion-col>
+                  
+                    
+                  </ion-row> -->
+              <ion-row class="hr">
+                 <ion-col col-6 class="orderprofilettilesmall">
+                    <span class=" ion-padding-top ">Payment Type </span>
+                 </ion-col>
+                 <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                    <span class=" ion-padding-top ">{{paytype}} </span>
+                 </ion-col>
+                
+                  
+                </ion-row>
+                <ion-row class="hr">
+                   <ion-col col-6 class="orderprofilettilesmall">
+                      <span class=" ion-padding-top ">Delivery Type </span>
+                   </ion-col>
+                   <ion-col col-6 text-wrap class="orderprofiletxtcolor">
+                      <span class=" ion-padding-top ">{{deltype}} </span>
+                   </ion-col>
+                  
+                    
+                  </ion-row>
+      
+     </ion-grid>
+ 
+     <ion-grid >
+         <ion-row >
+            
+             <ion-col class="ion-padding  orderregcolbgcolor ">
+               
+                 <span class=" ion-padding-top  orderprofilespanlabel">ITEM DETAILS </span>
+              
+             </ion-col>
+         </ion-row>
+         <ion-row>
+             <ion-col class="orderregcolbgcolor">
+               <div>ITEM</div>
+             </ion-col>
+             <ion-col class="orderregcolbgcolor">
+               <div>QUANTITY</div>
+             </ion-col>
+             <ion-col class="orderregcolbgcolor">
+               <div>PRICE</div>
+             </ion-col>
+           </ion-row>
+     
+     
+         <ion-row *ngFor="let item of curposts">
+             <ion-col text-wrap class="orderregcolborder" >
+                                    <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_name}} </span>
+                             </ion-col>
+                             <ion-col text-wrap class="orderregcolborder">
+                                 <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_qty}} </span>
+                          </ion-col>
+                          <ion-col text-wrap class="orderregcolborder">
+                             <span class=" ion-padding-top orderprofiletxtcolor">{{item.dum_item_price}} </span>
+                      </ion-col>
+           </ion-row>
+           <ion-row>
+               <ion-col text-wrap class="orderregcolborder">
+                                      <span class=" ion-padding-top orderprofiletxtcolor">TOTAL </span>
+                               </ion-col>
+                               <ion-col text-wrap class="orderregcolborder">
+                                   <span class=" ion-padding-top "> </span>
+                            </ion-col>
+                            <ion-col text-wrap class="orderregcolborder">
+                               <span class=" ion-padding-top orderprofiletxtcolor">{{totcost}} </span>
+                        </ion-col>
+             </ion-row>
+             
+             <ion-list radio-group *ngIf="buscattype == 'RESTAURANT'">
+                <ion-list-header >
+                  <ion-label class="orderprofilettilesmall">Pickup Type</ion-label>
+                </ion-list-header>
+                <ion-item>
+                  <ion-label style="font-weight:bold;color:#468999;">5 - 10 Minutes</ion-label>
+                  <ion-radio name="deltime" #deltime color="success" value="10" (ionSelect)="selectdeltimetype(10)"></ion-radio>
+                </ion-item>
+      
+                <ion-item>
+                  <ion-label style="font-weight:bold;color:#468999;">15-20 Minutes</ion-label>
+                  <ion-radio name="deltime" #deltime color="tertiary" value="20" (ionSelect)="selectdeltimetype(20)"></ion-radio>
+                </ion-item>
+                
+                              
+              </ion-list>
+
+              <ion-list radio-group *ngIf="buscattype !='RESTAURANT'">
+               <ion-list-header >
+                 <ion-label class="orderprofilettilesmall">Pickup Type</ion-label>
+               </ion-list-header>
+               <ion-item>
+                 <ion-label style="font-weight:bold;color:#468999;">Normal Delivery</ion-label>
+                 <ion-radio name="deltime" #deltime color="success" value="Normal" (ionSelect)="selectdeltimetype('Normal')"></ion-radio>
+               </ion-item>
+     
+               <ion-item>
+                 <ion-label style="font-weight:bold;color:#468999;">Express Delivery</ion-label>
+                 <ion-radio name="deltime" #deltime color="tertiary" value="Express" (ionSelect)="selectdeltimetype('Express')"></ion-radio>
+               </ion-item>
+               
+                             
+             </ion-list>
+             
+           </ion-grid>
+           <ion-grid>
+               <ion-row>
+               <ion-col col-6 class="orderprofilettilesmall">
+                   <button  class="orderprofileappbtn" ion-button   on-click="Showpickuplocation()">
+                       ACCEPT ORDER</button>
+                </ion-col>
+                <ion-col col-6  class="orderprofiletxtcolor">
+                   <button  class="orderprofileappbtn" ion-button   on-click="CancelOrder()">
+                      CANCEL ORDER
+                      </button>
+                </ion-col>
+               </ion-row>
+           </ion-grid>
+ 
+ </ion-content>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.pagebody {
+    font-family: "centabel";
+       font-family: 'Montserrat', sans-serif;
+  }
+  .pageheader
+  {
+    background: url("../../assets/imgs/login_bg.png") no-repeat fixed !important;
+    background-size: cover !important;
+    height:50px;
+  }
+  .imgcenter
+   {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .titleimg
+  {
+    
+    margin-left:10px;
+    float: left;
+    height: 40px;
+    margin-top:5px;
+    
+  }
+  .title2{
+      color: #468999;
+      font-weight: bold;
+  }
+  .cardodd
+  {
+      background-color: #468999;
+      color:#ffffff;
+      height: 50px;
+      font-weight:bold;
+      }
+  .cardeven
+  {
+    background-color: #ffffff;
+    color:#468999;
+      font-weight:bold;
+  }
+  .btnbgcolor
+  {
+      background-color: #468999;
+      color:#ffffff;
+      font-weight: bold;
+      border-radius:20px;
+     
+  }
+  .titcolor
+  {
+    color:#468999;
+    font-weight:bold;
+  }
+  .txtcolor
+  {
+    color:#000000;
+    font-weight:bold;
+    
+  }
+  
+  
